@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyShop - All Brands Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Easy<span>Shop</span></div>
+
+    <div class="navRight">
+      <input type="text" id="searchBox" placeholder="Search products..." />
+      <button class="cartBtn" onclick="toggleCart()">🛒 <span id="cartCount">0</span></button>
+    </div>
+  </nav>
+
+  <!-- CATEGORY BAR -->
+  <div class="categoryBar">
+
+    <div class="catCard" onclick="filterCategory('all')">
+      <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="all">
+      <p>All</p>
+      <span class="tag">Hot</span>
+    </div>
+
+    <div class="catCard dropdown">
+      <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="mobiles">
+      <p>Mobiles</p>
+      <span class="priceTag">From ₹6,999</span>
+
+      <div class="menu">
+        <a href="#" onclick="filterCategory('mobiles')">Smartphones</a>
+        <a href="#" onclick="filterCategory('mobiles')">Tablets</a>
+        <a href="#" onclick="filterCategory('mobiles')">Accessories</a>
+      </div>
+    </div>
+
+    <div class="catCard dropdown">
+      <img src="https://cdn-icons-png.flaticon.com/512/892/892458.png" alt="fashion">
+      <p>Fashion</p>
+      <span class="priceTag">Min 40% OFF</span>
+
+      <div class="menu">
+        <a href="#" onclick="filterCategory('fashion')">Men</a>
+        <a href="#" onclick="filterCategory('fashion')">Women</a>
+        <a href="#" onclick="filterCategory('fashion')">Shoes</a>
+      </div>
+    </div>
+
+    <div class="catCard dropdown">
+      <img src="https://cdn-icons-png.flaticon.com/512/1042/1042339.png" alt="electronics">
+      <p>Electronics</p>
+      <span class="priceTag">From ₹999</span>
+
+      <div class="menu">
+        <a href="#" onclick="filterCategory('electronics')">Laptops</a>
+        <a href="#" onclick="filterCategory('electronics')">Headphones</a>
+        <a href="#" onclick="filterCategory('electronics')">Watches</a>
+      </div>
+    </div>
+
+    <div class="catCard dropdown">
+      <img src="https://cdn-icons-png.flaticon.com/512/2933/2933820.png" alt="home">
+      <p>Home</p>
+      <span class="priceTag">From ₹499</span>
+
+      <div class="menu">
+        <a href="#" onclick="filterCategory('home')">Sofa</a>
+        <a href="#" onclick="filterCategory('home')">Bed</a>
+        <a href="#" onclick="filterCategory('home')">Decor</a>
+      </div>
+    </div>
+
+    <div class="catCard dropdown">
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="beauty">
+      <p>Beauty</p>
+      <span class="priceTag">Min 20% OFF</span>
+
+      <div class="menu">
+        <a href="#" onclick="filterCategory('beauty')">Skincare</a>
+        <a href="#" onclick="filterCategory('beauty')">Makeup</a>
+        <a href="#" onclick="filterCategory('beauty')">Perfume</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="heroText">
+      <h1>Shop Smart with <span>EasyShop</span></h1>
+      <p>All brands in one place ✅ Fashion, Electronics, Home & More.</p>
+      <button class="btn btn-primary" onclick="scrollToProducts()">Shop Now</button>
+    </div>
+
+    <div class="heroImg">
+      <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=80" alt="banner" />
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <div class="container" id="products">
+    <h2>Products</h2>
+    <p class="subText">Trending items for you</p>
+
+    <div class="grid" id="productGrid">
+      <!-- products from JS -->
+    </div>
+  </div>
+
+  <!-- CART SIDEBAR -->
+  <aside class="cartSidebar" id="cartSidebar">
+    <div class="cartHeader">
+      <h2>Your Cart</h2>
+      <button class="closeBtn" onclick="toggleCart()">✖</button>
+    </div>
+
+    <div class="cartItems" id="cartItems"></div>
+
+    <div class="cartFooter">
+      <div class="totalRow">
+        <p>Total:</p>
+        <h3>₹<span id="cartTotal">0</span></h3>
+      </div>
+      <button class="btn btn-primary full" onclick="checkout()">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footerBox">
+      <h3>EasyShop</h3>
+      <p>All brands in one store. Shop easy, shop smart ✅</p>
+    </div>
+
+    <div class="footerBox">
+      <h4>Links</h4>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+    </div>
+
+    <div class="footerBox">
+      <h4>Support</h4>
+      <p>Email: support@easyshop.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
